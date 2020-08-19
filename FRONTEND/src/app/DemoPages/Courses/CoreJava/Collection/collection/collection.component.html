@@ -1,0 +1,114 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+
+<div class="main-card mb-3 card">
+  <div class="card-body"><h5><b>Introduction</b></h5>
+   <ul> The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.</ul>
+  <ul> All the operations that you perform on data such as searching, sorting, insertion, manipulation, deletion, etc. can be achieved by Java Collections.</ul>
+<ul><b>Collection Framework</b> defines several classes and interfaces to represent a group of objects as a single unit. Collections are used to store, retrieve, manipulate, and communicate aggregate data. Typically, they represent data items that form a natural group, such as a poker hand (a collection of cards), a mail folder (a collection of letters), or a telephone directory (a mapping of names to phone numbers).</ul>
+    <!-- <ngb-accordion [closeOthers]="true" activeIds="static-1"> -->
+      <ngb-accordion [closeOthers]="true">
+      <ngb-panel id="static-1">
+        <ng-template ngbPanelTitle>
+          <span> <b>What is Collection Framework ?</b></span>
+   </ng-template>
+        
+        <ng-template ngbPanelContent>
+        
+        <ul>A collections framework is a unified architecture for representing and manipulating collections.</ul>
+        <ul>All collections frameworks contain the following:
+          
+                   
+          <li><b>Interfaces: </b>These are abstract data types that represent collections. Interfaces allow collections to be manipulated independently of the details of their representation. In object-oriented languages, interfaces generally form a hierarchy.</li>
+          <li><b>Implementations: </b>These are the concrete implementations of the collection interfaces. In essence, they are reusable data structures.</li>
+          <li><b>Algorithms: </b>These are the methods that perform useful computations, such as searching and sorting, on objects that implement collection interfaces. The algorithms are said to be polymorphic: that is, the same method can be used on many different implementations of the appropriate collection interface. In essence, algorithms are reusable functionality.</li> 
+          
+      </ul>
+      <h6><b>Hierarchy of Collection Framework</b></h6>
+      <ul>Let us see the hierarchy of Collection framework. The java.util package contains all the classes and interfaces for the Collection framework.</ul>
+      <ul>The collection interfaces are divided into two groups:</ul>
+      <ul> The most basic interface, java.util.Collection.</ul>
+      <div><span><ul><img src="/assets/images/course/collections-framework-hierachy.gif"  height="350" 
+        width="750" alt="image"></ul></span></div>
+  
+    <div><span><ul> The other collection interfaces are based on java.util.Map and are not true collections</ul></span></div>
+    
+    <div><span><ul><img src="/assets/images/course/map-interface-hierarchy.png"  height="250" 
+      width="650" alt="image"></ul></span></div>
+      <h6><b>Collection Implementations</b></h6>
+      <ul>Classes that implement the collection interfaces typically have names in the form of . The general purpose implementations are summarized in the following table:</ul>
+      <div><span><ul><img src="/assets/images/course/general_collections_impl.png"   alt="image"></ul></span></div>
+        <ul>The AbstractCollection, AbstractSet, AbstractList, AbstractSequentialList and AbstractMapclasses provide basic implementations of the core collection interfaces, to minimize the effort required to implement them. The API documentation for these classes describes precisely how each method is implemented so the implementer knows which methods must be overridden, given the performance of the basic operations of a specific implementation.</ul>
+  
+       
+      </ng-template>
+      </ngb-panel> 
+      <ngb-panel id="static-2">
+        <ng-template ngbPanelTitle>
+               <span> <b>Collections Framework - The List Interface </b></span>
+        </ng-template>        
+        <br><br>
+        <ng-template ngbPanelContent>
+          
+          <h5><b>Collections Framework - The List Interface</b></h5>
+          
+          <div><span><ul>
+                      <li>Elements of the lists are ordered using a Zero-based index. </li>
+                      <li>You can access the elements of lists using an integer index - get() API. </li>
+                      <li>It is an ordered collection (also known as a sequence). It guarantees insertion order. </li>
+                      <li>The user of this interface has precise control over where in the list each element is inserted. </li>
+                      <li>It guarantees insertion order so a user can access elements by their integer index (position in the list), and search for elements in the list. </li>
+                      <li>A list may contain multiple null elements. </li>
+                      <li>List interface can contain duplicate elements. </li>
+                      </ul>
+                    <ul>The Java platform contains two general-purpose List implementations - ArrayList and LinkedList.
+                      Here is simple List interface example using ArrayList implementation class.</ul></span>
+          </div>
+
+         <h5><b>List Interface Simple Example</b></h5>
+          <div><span>
+            <ul>The bean can be considered an equivalent of a java class. Creating a bean is same as creating an object using 'new' keyword in java.</ul>
+            <ul>If you want spring to create objects for you, you need to inform spring about all the objects that spring has to create for you.</ul>
+            <ul>Say there is a class called 'Car' :</ul>
+          
+          
+            <div class="mb-3 card text-white card-body"
+            style="background-color: rgb(51, 51, 51); border-color: rgb(51, 51, 51);"> 
+
+            &nbsp;&nbsp;import java.util.ArrayList;<br>
+            &nbsp;&nbsp;import java.util.List;<br><br><br>
+            &nbsp;&nbsp;public class CreateArrayListExample {{openBrace}}<br>
+            &nbsp;&nbsp;&nbsp; // Creating an ArrayList of String using<br>
+            &nbsp;&nbsp;&nbsp; List{{openTag}}String{{closeTag}} animals = new ArrayList{{openTag}}{{closeTag}}();<br>
+            &nbsp;&nbsp;&nbsp; //  Adding new elements to the ArrayList<br>
+            &nbsp;&nbsp;&nbsp; animals.add("Lion");<br>
+            &nbsp;&nbsp;&nbsp; animals.add("Tiger");<br>
+            &nbsp;&nbsp;&nbsp; animals.add("Cat");<br>
+            &nbsp;&nbsp;&nbsp; animals.add("Dog");<br>
+            &nbsp;&nbsp;&nbsp; System.out.println(animals);<br>
+            &nbsp;&nbsp;&nbsp;{{closeBrace}}<br>
+            &nbsp;&nbsp;{{closeBrace}}<br> 
+       </div>
+         
+    </span>
+    </div>
+       
+    <div class="mb-1 card text-white card-body bg-warning"><b>OUTPUT : </b>[Lion, Tiger, Cat, Dog]</div>
+    <br><br>
+    <div><h5><b>List Interface Hierarchy Diagram</b></h5><br>
+      <div><span><ul><img src="/assets/images/course/list-interface.png"  alt="image"></ul></span></div>
+    </div><br><br>
+    <h5><b>List Interface Implementations</b></h5>
+  
+    <ul>The Java platform contains two general-purpose List implementations.
+      <li><b><a routerLinkActive="active-item" href="http://www.javaguides.net/2018/08/collections-framework-the-list-interface.html" 
+        target="_blank">ArrayList</a></b> , which is usually the better-performing implementation.</li>
+      <li><b><a routerLinkActive="active-item" href="https://www.javaguides.net/2018/08/collections-framework-the-set-interface.html" 
+        target="_blank">LinkedList</a></b> , which offers better performance under certain circumstances.</li>
+      <li><b><a routerLinkActive="active-item">Vector</a></b> , which is thread-safe.</li>
+      
+    </ul>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</div>
